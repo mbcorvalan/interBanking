@@ -1,0 +1,54 @@
+.form {
+    &__wrapper {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+    }
+
+    &__field {
+        position: relative;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        input {
+            border: 0;
+            border-bottom: 2px solid #ccc;
+            font-size: inherit;
+            padding: 0;
+            outline: none;
+        }
+
+        input:focus {
+            border-bottom-color: $purple;
+        }
+
+        input::placeholder {
+            color: transparent;
+
+        }
+
+        input:focus::placeholder {
+            color: initial;
+        }
+
+        label {
+            position: absolute;
+            top: -5px;
+            left: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+
+        }
+
+        &:has(input:not(:placeholder-shown)) label,
+        &:has(input:focus) label {
+            top: -1.5rem;
+            font-size: 0.8rem;
+            pointer-events: initial;
+        }
+
+    }
+}

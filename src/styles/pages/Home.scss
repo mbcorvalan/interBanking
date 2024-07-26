@@ -1,0 +1,21 @@
+.home {
+    &__main-title {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 700;
+        color: $black;
+    }
+
+    &__forms {
+        display: flex;
+        margin: 2rem 0;
+        justify-content: space-between;
+        padding: 2rem 0;
+    }
+}
